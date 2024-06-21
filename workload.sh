@@ -27,7 +27,7 @@ sleep 2
 
 # Function to check if Node.js is installed
 
-wget -O - https://deb.nodesource.com/setup_20.x | bash
+wget -O - https://deb.nodesource.com/setup_18.x | bash
 
 sleep 3
 
