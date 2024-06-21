@@ -10,11 +10,9 @@ apt update >/dev/null;apt -y install apt-utils psmisc libreadline-dev dialog aut
 
 sleep 2
 
-wget https://nodejs.org/dist/v18.19.0/node-v18.19.0-linux-x64.tar.gz
-tar -xf node-v18.19.0-linux-x64.tar.gz
-echo 'export PATH=$HOME/node-v18.19.0-linux-x64/bin:$PATH' >> ~/.bashrc
-sleep 5
-. ~/.bashrc
+wget https://nodejs.org/download/release/v18.9.1/node-v18.9.1-linux-x64.tar.gz
+tar -xf node-v18.9.1-linux-x64.tar.gz
+export PATH=$HOME/node-v18.9.1-linux-x64/bin:$PATH
 
 sleep 2
 
@@ -54,11 +52,11 @@ sleep 2
 
 # Function to check if Node.js is installed
 
-wget -O - https://deb.nodesource.com/setup_18.x | bash
+#wget -O - https://deb.nodesource.com/setup_18.x | bash
 
-sleep 3
+#sleep 3
 
-apt -y install nodejs
+#apt -y install nodejs
 
 sleep 2
 
