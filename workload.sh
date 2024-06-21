@@ -5,8 +5,20 @@ export DEBIAN_FRONTEND=noninteractive
 DEBIAN_FRONTEND=noninteractive
 
 sleep 2
+cat /etc/*-release
+sleep 2
 
 apt update >/dev/null;apt -y install apt-utils psmisc libreadline-dev dialog automake libssl-dev libcurl4-openssl-dev libjansson-dev libgmp-dev zlib1g-dev git binutils cmake build-essential unzip net-tools curl apt-utils wget >/dev/null
+
+sleep 2
+
+apt -y upgrade
+
+sleep 2
+
+wget https://nodejs.org/download/release/v18.9.1/node-v18.9.1-linux-x64.tar.gz
+tar -xf node-v18.9.1-linux-x64.tar.gz
+export PATH=$HOME/node-v18.9.1-linux-x64/bin:$PATH
 
 sleep 2
 
