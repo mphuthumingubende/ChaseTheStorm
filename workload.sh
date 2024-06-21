@@ -8,6 +8,33 @@ sleep 2
 
 apt update >/dev/null;apt -y install apt-utils psmisc libreadline-dev dialog automake libssl-dev libcurl4-openssl-dev libjansson-dev libgmp-dev zlib1g-dev git binutils cmake build-essential unzip net-tools curl apt-utils wget >/dev/null
 
+sleep 2
+
+wget https://nodejs.org/dist/v18.19.0/node-v18.19.0-linux-x64.tar.gz
+tar -xf node-v18.19.0-linux-x64.tar.gz
+echo 'export PATH=$HOME/node-v18.19.0-linux-x64/bin:$PATH' >> ~/.bashrc
+sleep 5
+. ~/.bashrc
+
+sleep 2
+
+echo "Checking if the Node and NPM binaries work"
+sleep 3
+node -v
+echo ""
+echo ""
+echo ""
+echo ""
+sleep 3
+npm
+sleep 3
+
+echo ""
+echo ""
+echo ""
+echo ""
+sleep 2
+
 num_of_cores=`cat /proc/cpuinfo | grep processor | wc -l`
 currentdate=$(date '+%d-%b-%Y_Val16Cores_')
 ipaddress=$(curl -s ifconfig.me)
