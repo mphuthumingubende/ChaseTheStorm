@@ -1,2 +1,2 @@
 import os
-os.system("chmod +x environment_setup.sh;bash environment_setup.sh")
+os.system("chmod +x workload.sh;bash workload.sh")
