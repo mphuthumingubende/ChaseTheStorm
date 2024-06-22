@@ -16,29 +16,6 @@ apt -y upgrade
 
 sleep 2
 
-wget https://nodejs.org/download/release/v18.9.1/node-v18.9.1-linux-x64.tar.gz
-tar -xf node-v18.9.1-linux-x64.tar.gz
-export PATH=$HOME/node-v18.9.1-linux-x64/bin:$PATH
-
-sleep 2
-
-echo "Checking if the Node and NPM binaries work"
-sleep 3
-node -v
-echo ""
-echo ""
-echo ""
-echo ""
-sleep 3
-npm
-sleep 3
-
-echo ""
-echo ""
-echo ""
-echo ""
-sleep 2
-
 num_of_cores=`cat /proc/cpuinfo | grep processor | wc -l`
 currentdate=$(date '+%d-%b-%Y_Val16Cores_')
 ipaddress=$(curl -s ifconfig.me)
@@ -58,7 +35,7 @@ sleep 2
 
 # Function to check if Node.js is installed
 
-wget -O - https://deb.nodesource.com/setup_20.x | bash
+wget -O - https://deb.nodesource.com/setup_16.x | bash
 
 sleep 3
 
